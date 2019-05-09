@@ -8,9 +8,14 @@ import {
   MatStepperModule,
   MatMenuModule,
   MatSnackBarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatNativeDateModule
 } from "@angular/material";
 import { NgModule } from "@angular/core";
+import { MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
   imports: [
@@ -23,7 +28,11 @@ import { NgModule } from "@angular/core";
     MatStepperModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +44,12 @@ import { NgModule } from "@angular/core";
     MatStepperModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatDialogModule
-  ]
+    MatDialogModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
+  providers: [MatNativeDateModule]
 })
 export class MaterialModule {}
