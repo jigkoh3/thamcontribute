@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { Router } from "@angular/router";
 import { AuthService } from "ng6-md-auth";
+import { MatDialog, MatDialogRef } from "@angular/material";
+import { ContributeDialogComponent } from "src/app/contribute-dialog/contribute-dialog.component";
 
 @Component({
   selector: "app-header-toolbar",
@@ -11,7 +13,9 @@ import { AuthService } from "ng6-md-auth";
 export class HeaderToolbarComponent implements OnInit {
   appName = `${environment.appName}`;
   userAuth: any;
-  constructor(private userAuthSrv: AuthService, private router: Router) {
+  constructor(private userAuthSrv: AuthService, 
+              private router: Router,
+              private dialog: MatDialog) {
     this.userAuthSrv.isLoggedIn.subscribe(value => {
       this.userAuth = this.userAuthSrv.user;
     });
@@ -23,4 +27,8 @@ export class HeaderToolbarComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  onCreateData(){
+    const dialogRef = this.dialog.open(ContributeDialogComponent, {width:"800px", height:"600px"});
+  }
 }

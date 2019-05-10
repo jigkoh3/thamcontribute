@@ -1,0 +1,90 @@
+<table>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="จำนวนเงินลงขันผลตอบแทน">
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="เลขที่บัญชีโอนผลตอบแทน">
+      </mat-form-field>
+
+    </td>
+    <td>
+      <mat-form-field>
+        <input matInput [matDatepicker]="investDatepicker" placeholder="วันที่โอนผลตอบแทน">
+        <mat-datepicker-toggle matSuffix [for]="investDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #investDatepicker></mat-datepicker>
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="หลักฐานการใบลงขัน">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="หลักฐานการโอนเงินผลตอบแทน">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="จำนวนเงินลงขันส่วนร่วม">
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="เลขที่บัญชีโอนผลส่วนร่วม">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <input matInput [matDatepicker]="participateDatepicker" placeholder="วันที่โอนส่วนร่วม">
+        <mat-datepicker-toggle matSuffix [for]="participateDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #participateDatepicker></mat-datepicker>
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="หลักฐานใบลงขัน">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="หลักฐานการโอนเงินส่วนร่วม">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <mat-form-field>
+      <input matInput placeholder="ชื่อบัญชี">
+    </mat-form-field>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="ธนาคาร">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <input matInput placeholder="เลขบัญชี">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>

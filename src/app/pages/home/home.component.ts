@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   openContributeDialog() {
-     const dialogRef = this.dialog.open(ContributeDialogComponent, {width:"800px", height:"600px"});
+    // const dialogRef = this.dialog.open(ContributeDialogComponent, {width:"800px", height:"600px"});
     // this.data.push({fullName:"aaaa", imgUrl:"dsfsdfsdf"});
   }
 }

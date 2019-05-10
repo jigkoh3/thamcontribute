@@ -17,9 +17,9 @@ import { environment } from "src/environments/environment";
 import { AuthModule } from "ng6-md-auth";
 import { ContributeDialogComponent } from './contribute-dialog/contribute-dialog.component';
 import { ContributeStepperComponent } from './contribute-stepper/contribute-stepper.component';
-import { AddressComponent } from './components/contributeData/address/address.component';
-import { PersonalInfoComponent } from './components/contributeData/personal-info/personal-info.component';
-import { ContributeInfoComponent } from './components/contributeData/contribute-info/contribute-info.component';
+import { AddressComponent } from './components/contributeInfo/address/address.component';
+import { PersonalInfoComponent } from './components/contributeInfo/personal-info/personal-info.component';
+import { ContributeInfoComponent } from './components/contributeInfo/contribute-info/contribute-info.component';
 
 
 const apiSrvCfg = environment;
