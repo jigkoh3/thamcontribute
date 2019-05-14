@@ -1,55 +1,51 @@
-<table>
-  <tr>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="เลขประจำตัวประชาชน" [(ngModel)]="info.id">
-      </mat-form-field>
-    </td>
-    <td>
-      <mat-form-field>
-        <mat-label>คำนำหน้าชื่อ</mat-label>
-        <mat-select [(ngModel)]="info.prefix">
-          <mat-option *ngFor="let item of prefixNameList" [value]="item">
-            {{item}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="ชื่อ" [(ngModel)]="info.firstName">
-      </mat-form-field>
-    </td>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="นามสกุล" [(ngModel)]="info.lastName">
-      </mat-form-field>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="เบอร์โทร" [(ngModel)]="info.phone">
-      </mat-form-field>
-    </td>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="อีเมลล์" [(ngModel)]="info.email">
-      </mat-form-field>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="Line" [(ngModel)]="info.line">
-      </mat-form-field>
-    </td>
-    <td>
-      <mat-form-field>
-        <input matInput placeholder="Facebook" [(ngModel)]="info.facebook">
-      </mat-form-field>
-    </td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="เลขประจำตัวประชาชน" [(ngModel)]="info.id">
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field>
+      <mat-label>คำนำหน้าชื่อ</mat-label>
+      <mat-select [(ngModel)]="info.prefix">
+        <mat-option *ngFor="let item of prefixNameList" [value]="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="ชื่อ" [(ngModel)]="info.firstName">
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="นามสกุล" [(ngModel)]="info.lastName">
+    </mat-form-field>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="เบอร์โทร" [(ngModel)]="info.phone">
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="อีเมลล์" [(ngModel)]="info.email">
+    </mat-form-field>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="Line" [(ngModel)]="info.line">
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput placeholder="Facebook" [(ngModel)]="info.facebook">
+    </mat-form-field>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.row {      
+    //display: flex;
+    //flex-direction: column;
+}
+
+.row > * {
+    width: 100%;
+}
+
+.col-6 > * {
+    width: 100%;
+}
+
