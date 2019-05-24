@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ContributeInfo } from '../components/contributeInfo/contributeInfo';
 
 @Component({
   selector: 'app-contribute-stepper',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contribute-stepper.component.scss']
 })
 export class ContributeStepperComponent implements OnInit {
+
+  @Input() info: ContributeInfo;
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 <mat-horizontal-stepper>
   <mat-step label="ข้อมูลพื้นฐาน">
-    <app-personal-info ></app-personal-info>
+    <app-personal-info [info]="info.personalInfo" ></app-personal-info>
   </mat-step>
   <mat-step label="ที่อยู่ตามบัตรประชาชน">
     <app-address></app-address>

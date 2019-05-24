@@ -1,11 +1,14 @@
 <div class="content">
     <div class="row mt-3">
         <div class="col-md-4 mb-3">
-            <mat-card class="example-card">
-                
+            <mat-card class="example-card" (click)="onUpdateData()">
+                <mat-card-content>
+                    <!-- <p>FirstName: {{data.personalInfo.firstName}}</p>
+                    <p>LastName:  {{data.personalInfo.lastName}}</p> -->
+                </mat-card-content>
             </mat-card>
         </div>
-        <div class="col-md-4 mb-3" *ngFor="let item of data">
+        <!-- <div class="col-md-4 mb-3" *ngFor="let item of data">
             <mat-card class="example-card">
                 <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
                     alt="Photo of a Shiba Inu">
@@ -21,14 +24,7 @@
                     <button mat-button>SHARE</button>
                 </mat-card-actions>
             </mat-card>
-        </div>
-
+        </div> -->
     </div>
-    
 </div>
-<!--
-<div class="row">
-        <button (click)="openContributeDialog()">Add</button>
-</div>
--->
 

@@ -18,27 +18,31 @@ export class Address {
     }
 };
 
-export class PersonalInfo {
-    prefix: string;
-    id: string;
-    firstName: string;
-    lastName: string;
-    phone: string;
-    email: string;
-    line: string;
-    facebook: string;
-    address: Address;
+export interface PersonalInfo {
+    // prefix: string;
+    // id: string;
+    firstname: string;
+    lastname: string;
+    // phone: string;
+    // email: string;
+    // line: string;
+    // facebook: string;
+    // address: Address;
 
-    constructor() {
-        this.prefix = "";
-        this.id = "";
-        this.firstName = "";
-        this.lastName = "";
-        this.phone = "";
-        this.email = "";
-        this.line = "";
-        this.facebook = "";
-        this.address = new Address();
-    }
+    // constructor() {
+    //     this.prefix = "";
+    //     this.id = "";
+    //     this.firstName = "";
+    //     this.lastName = "";
+    //     this.phone = "";
+    //     this.email = "";
+    //     this.line = "";
+    //     this.facebook = "";
+    //     this.address = new Address();
+    // }
 };
 
+export interface ReceiveHttp {
+    status: String;
+    data: PersonalInfo[];
+};

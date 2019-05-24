@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { AuthService } from "ng6-md-auth";
 import { MatDialog, MatDialogRef } from "@angular/material";
 import { ContributeDialogComponent } from "src/app/contribute-dialog/contribute-dialog.component";
+import { ContributeInfo } from "../contributeInfo/contributeInfo";
 
 @Component({
   selector: "app-header-toolbar",
@@ -13,6 +14,8 @@ import { ContributeDialogComponent } from "src/app/contribute-dialog/contribute-
 export class HeaderToolbarComponent implements OnInit {
   appName = `${environment.appName}`;
   userAuth: any;
+  info: ContributeInfo;
+
   constructor(private userAuthSrv: AuthService, 
               private router: Router,
               private dialog: MatDialog) {
@@ -20,6 +23,11 @@ export class HeaderToolbarComponent implements OnInit {
       this.userAuth = this.userAuthSrv.user;
     });
     this.userAuth = this.userAuthSrv.user;
+
+    this.info = new ContributeInfo();
+
+    //this.info.personalInfo.firstName = "Thamturakit firstName";
+    //this.info.personalInfo.lastName = "thamturakit lastName";
   }
   onLogout() {
     this.userAuthSrv.logout();
@@ -29,6 +37,9 @@ export class HeaderToolbarComponent implements OnInit {
   ngOnInit() {}
 
   onCreateData(){
-    const dialogRef = this.dialog.open(ContributeDialogComponent, {width:"800px", height:"600px"});
+    const dialogRef = this.dialog.open(ContributeDialogComponent, 
+                                      {width: "800px", 
+                                       height:"600px",
+                                       data: this.info});
   }
 }
